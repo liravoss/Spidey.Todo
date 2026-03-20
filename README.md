@@ -1,8 +1,58 @@
-# 🕷️ SPIDEY TODO
+<div align="center">
 
-> A Spider-Man themed personal task manager with a neon glass UI,
-> private per-browser storage, and a Python importer that reads any file
-> line by line into your todo list.
+```
+███████╗██████╗ ██╗██████╗ ███████╗██╗   ██╗    ████████╗ ██████╗ ██████╗  ██████╗ 
+██╔════╝██╔══██╗██║██╔══██╗██╔════╝╚██╗ ██╔╝    ╚══██╔══╝██╔═══██╗██╔══██╗██╔═══██╗
+███████╗██████╔╝██║██║  ██║█████╗   ╚████╔╝        ██║   ██║   ██║██║  ██║██║   ██║
+╚════██║██╔═══╝ ██║██║  ██║██╔══╝    ╚██╔╝         ██║   ██║   ██║██║  ██║██║   ██║
+███████║██║     ██║██████╔╝███████╗   ██║           ██║   ╚██████╔╝██████╔╝╚██████╔╝
+╚══════╝╚═╝     ╚═╝╚═════╝ ╚══════╝   ╚═╝           ╚═╝    ╚═════╝ ╚═════╝  ╚═════╝ 
+```
+
+**`🕷️ Your private mission board. No account. No tracking. Just tasks.`**
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+
+</div>
+
+---
+
+```
+  //                                                          \\
+ //   W I T H  G R E A T  P O W E R  C O M E S               \\
+//    G R E A T  T A S K  M A N A G E M E N T                  \\
+```
+
+---
+
+## 🕸️ What Is This
+
+A **Spider-Man themed personal task manager** built with pure HTML, CSS, and JavaScript.  
+Tasks live in your browser — private, local, yours. No login. No cloud. No nonsense.
+
+Import any `.txt`, `.pdf`, or `.docx` file and every line becomes a task.  
+Run it locally or deploy it anywhere in minutes.
+
+---
+
+## ⚡ Features
+
+| | Feature | Description |
+|---|---|---|
+| 🔒 | **Private by default** | Unique Agent ID per browser · Tasks stored in `localStorage` |
+| 🎯 | **Priority levels** | Low · Medium · High · Critical — each colour-coded |
+| ⏰ | **Due dates** | Overdue tasks glow red with a ⚠ warning |
+| 📝 | **Notes** | Optional comment on every task |
+| 🔍 | **Live search** | Filter across task text and notes instantly |
+| 📊 | **Progress bar** | Shows % of missions completed |
+| 📎 | **File import** | Upload `.txt` / `.pdf` / `.docx` — each line = one task |
+| 🐍 | **Python importer** | CLI tool to read any file and push tasks to the app |
+| 🗑️ | **Clear All** | Wipe everything with one click + confirmation modal |
+| 🌐 | **Hostable** | Flask server included — deploy to Render, Railway, Heroku |
 
 ---
 
@@ -11,314 +61,124 @@
 ```
 spidey-todo/
 │
-├── index.html          ← Main HTML — app shell & layout
-├── style.css           ← All visual styles (glass, neon, wallpaper)
-├── app.js              ← All app logic (tasks, storage, filters, import)
+├── 🌐  index.html          ← App shell & layout
+├── 🎨  style.css           ← Neon glass UI · Spider-Man theme
+├── ⚙️  app.js              ← All logic · storage · filters · import
 │
-├── server.py           ← Flask web server for hosting
-├── import.py           ← Python CLI importer (.txt / .pdf / .docx / .csv)
+├── 🐍  server.py           ← Flask web server (for hosting)
+├── 📥  import.py           ← CLI file importer
 │
-├── requirements.txt    ← All Python dependencies
-├── setup.sh            ← One-command setup (Linux / Mac)
-├── setup.bat           ← One-command setup (Windows)
-├── Procfile            ← Deployment config for Render / Railway / Heroku
-├── .gitignore          ← Git ignore rules (includes venv/)
+├── 📋  requirements.txt    ← Python dependencies
+├── 🚀  Procfile            ← Render / Railway / Heroku deploy config
+├── 🪟  setup.bat           ← One-click Windows setup
+├── 🐧  setup.sh            ← One-click Linux/Mac setup
 │
-├── wallpaper.jpg       ← Spider-Man background image
-├── spider-logo.png     ← Spider logo (used in header)
-│
-└── README.md           ← You are here
+├── 🖼️  wallpaper.jpg       ← Spider-Man background
+├── 🕷️  spider-logo.png     ← Spider logo
+└── 📖  README.md
 ```
 
 ---
 
 ## 🚀 Quick Start
 
-### Option 1 — Open Locally (no Python needed)
-
-Just double-click `index.html` — works in any modern browser instantly.
-
----
-
-### Option 2 — Run with Flask (for hosting / file upload API)
-
-**Linux / Mac:**
-```bash
-chmod +x setup.sh
-./setup.sh
-source venv/bin/activate
-python server.py
+### Open Instantly (no install)
+```
+Just double-click index.html
 ```
 
-**Windows:**
-```bat
+### Run with Flask
+```bash
+# Windows
 setup.bat
-venv\Scripts\activate
-python server.py
-```
 
-Then open **http://localhost:5000**
+# Linux / Mac
+chmod +x setup.sh && ./setup.sh
+
+# Then
+source venv/bin/activate       # Linux/Mac
+venv\Scripts\activate          # Windows
+
+python server.py
+# → open http://localhost:5000
+```
 
 ---
 
-## 🐍 Virtual Environment (recommended)
-
-Always use a virtual environment — this keeps SPIDEY TODO's dependencies
-isolated from your global Python and prevents version conflicts.
-
-### Why this matters
-
-Installing packages globally can cause conflicts when different projects
-need different versions of the same library. A virtual environment gives
-this project its own private copy of every dependency.
-
-### Manual setup (if you prefer not to use the setup scripts)
+## 🐍 Python File Importer
 
 ```bash
-# 1. Create the virtual environment
-python3 -m venv venv          # Linux / Mac
-python  -m venv venv          # Windows
+# Activate venv first, then:
 
-# 2. Activate it
-source venv/bin/activate      # Linux / Mac
-venv\Scripts\activate         # Windows
+python import.py my-tasks.txt          # plain text — one task per line
+python import.py roadmap.pdf           # PDF — each line becomes a task
+python import.py notes.docx            # Word doc — each paragraph = task
+python import.py data.csv              # CSV — first column of each row
 
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Run the server
-python server.py
-
-# 5. When you're done
-deactivate
+python import.py tasks.txt --priority high     # set priority for all
+python import.py tasks.txt --inject            # push straight into Chrome
 ```
-
-### VS Code tip
-
-If VS Code shows the message:
-
-> *"Would you like to create a virtual environment with these packages?"*
-
-Click **Yes** — it will create the `venv/` folder and select it as your
-Python interpreter automatically. Then open the integrated terminal and run:
-
-```bash
-pip install -r requirements.txt
-python server.py
-```
-
-### Daily workflow
-
-```bash
-# Every time you work on the project:
-source venv/bin/activate      # Linux / Mac
-venv\Scripts\activate         # Windows
-
-python server.py              # start the app
-python import.py myfile.txt   # import a file
-
-deactivate                    # when done
-```
-
-> **Note:** The `venv/` folder is in `.gitignore` — never commit it.
-> Anyone cloning the repo just runs `setup.sh` / `setup.bat` to recreate it.
 
 ---
 
-## 🌐 Hosting Guide
+## 🌐 Deploy in 5 Minutes
 
-### Render.com (free tier available)
+### Render.com (recommended · free tier)
 
-1. Push this folder to a GitHub repo
-2. Go to [render.com](https://render.com) → **New Web Service**
-3. Connect your GitHub repo
-4. Set these values:
+```
+1. Push this repo to GitHub
+2. render.com → New Web Service → connect repo
+3. Build command : pip install -r requirements.txt
+4. Start command : gunicorn server:app --bind 0.0.0.0:$PORT
+5. Deploy → live at https://your-app.onrender.com
+```
 
-   | Field | Value |
-   |---|---|
-   | **Build Command** | `pip install -r requirements.txt` |
-   | **Start Command** | `gunicorn server:app --bind 0.0.0.0:$PORT` |
-   | **Environment** | Python 3 |
-
-5. Click **Deploy** — live at `https://your-app.onrender.com`
-
-> No virtual environment needed on hosting platforms — they isolate
-> dependencies automatically per deployment.
-
----
-
-### Railway.app
-
+### Railway / Heroku
 ```bash
-npm install -g @railway/cli
-railway login
-railway init
+# The Procfile handles everything automatically
 railway up
-```
-
-Or connect your GitHub repo — Railway auto-detects the `Procfile`.
-
----
-
-### Heroku
-
-```bash
-heroku login
-heroku create spidey-todo
+# or
 git push heroku main
-heroku open
 ```
 
 ---
 
-### Fly.io
+## 🎨 Tech Stack
 
-```bash
-fly launch        # auto-detects Flask
-fly deploy
-fly open
+```
+Frontend  →  Vanilla HTML + CSS + JavaScript  (zero frameworks)
+Backend   →  Python · Flask · Gunicorn
+Storage   →  Browser localStorage  (private · no server needed)
+PDF       →  PDF.js  (loaded from CDN on demand)
+DOCX      →  Mammoth.js  (loaded from CDN on demand)
+Fonts     →  Orbitron · Rajdhani · Share Tech Mono  (Google Fonts)
 ```
 
 ---
 
-### VPS / Self-hosted (Ubuntu/Debian)
+## 🔒 Privacy
 
-```bash
-git clone <your-repo> /var/www/spidey-todo
-cd /var/www/spidey-todo
-
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-# Run as daemon
-gunicorn server:app --bind 0.0.0.0:5000 --daemon --workers 2
 ```
-
-**systemd service** (`/etc/systemd/system/spidey-todo.service`):
-```ini
-[Unit]
-Description=Spidey TODO
-After=network.target
-
-[Service]
-User=www-data
-WorkingDirectory=/var/www/spidey-todo
-ExecStart=/var/www/spidey-todo/venv/bin/gunicorn server:app --bind 0.0.0.0:5000 --workers 2
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-```
-
-```bash
-systemctl enable spidey-todo
-systemctl start  spidey-todo
+✓  No account required
+✓  No data sent to any server
+✓  No tracking, no analytics
+✓  Each browser gets its own isolated task list
+✓  Incognito mode = temporary list, cleared on close
 ```
 
 ---
 
-### Windows Server
-
-```bat
-setup.bat
-venv\Scripts\activate
-waitress-serve --host=0.0.0.0 --port=5000 server:app
-```
-
----
-
-## 🔌 Server API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/` | Serves `index.html` |
-| `GET` | `/<filename>` | Serves static files (CSS, JS, images) |
-| `GET` | `/api/tasks/<session_id>` | Get saved tasks for a session |
-| `POST` | `/api/tasks/<session_id>` | Save / replace all tasks |
-| `POST` | `/api/tasks/<session_id>/import` | Import lines as tasks |
-| `POST` | `/api/upload` | Upload a file, get back parsed lines |
-| `GET` | `/health` | Health check → `{"status":"ok"}` |
-
----
-
-## 🐍 Python Importer CLI
-
-```bash
-# Activate venv first
-source venv/bin/activate    # Linux / Mac
-venv\Scripts\activate       # Windows
-
-# Then run
-python import.py my-tasks.txt
-python import.py notes.pdf
-python import.py report.docx
-python import.py data.csv
-
-# Set priority for all imported tasks
-python import.py tasks.txt --priority high
-
-# Inject directly into Chrome
-python import.py tasks.txt --inject
-```
-
-### Supported file types
-
-| Extension | How it's read |
-|---|---|
-| `.txt` | One task per line |
-| `.pdf` | Text extracted with **pypdf** |
-| `.docx` | Each paragraph = one task via **python-docx** |
-| `.csv` | First column of every row |
-| other | Treated as plain text |
-
----
-
-## 📦 Dependencies (`requirements.txt`)
+<div align="center">
 
 ```
-pypdf==4.3.1             # Read PDF files
-python-docx==1.1.2       # Read .docx Word documents
-websocket-client==1.8.0  # Chrome injection (--inject flag)
-flask==3.0.3             # Web server
-flask-cors==4.0.1        # Cross-origin requests
-gunicorn==22.0.0         # Production server (Linux/Mac)
-waitress==3.0.0          # Production server (Windows)
+ ░██████╗██████╗░██╗██████╗░███████╗██╗░░░██╗  ████████╗░█████╗░██████╗░░█████╗░
+ ██╔════╝██╔══██╗██║██╔══██╗██╔════╝╚██╗░██╔╝  ╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗
+ ╚█████╗░██████╔╝██║██║░░██║█████╗░░░╚████╔╝░  ░░░██║░░░██║░░██║██║░░██║██║░░██║
+ ░╚═══██╗██╔═══╝░██║██║░░██║██╔══╝░░░░╚██╔╝░░  ░░░██║░░░██║░░██║██║░░██║██║░░██║
+ ██████╔╝██║░░░░░██║██████╔╝███████╗░░░██║░░░  ░░░██║░░░╚█████╔╝██████╔╝╚█████╔╝
+ ╚═════╝░╚═╝░░░░░╚═╝╚═════╝░╚══════╝░░░╚═╝░░░  ░░░╚═╝░░░░╚════╝░╚═════╝░░╚════╝░
 ```
 
----
+*Made with 🕷️ and way too much CSS*
 
-## 🕹️ App Features
-
-| Feature | Description |
-|---|---|
-| **Private storage** | Unique Agent ID per browser — tasks in `localStorage`, no account |
-| **Add tasks** | Type and press **SHOOT** or `Enter` |
-| **Priority levels** | Low · Medium · High · Critical — colour-coded |
-| **Due dates** | Overdue tasks glow red with ⚠ |
-| **Notes** | Optional `// comment` per task |
-| **Filters** | All · Active · Done · Overdue |
-| **Search** | Live search across text and notes |
-| **Progress bar** | Shows % complete |
-| **Browser import** | Click 📎 in the app — pick `.txt` / `.pdf` / `.docx` |
-| **Python import** | Run `import.py` from terminal |
-
----
-
-## 🎨 Customising
-
-Edit the CSS variables at the top of `style.css`:
-
-```css
-:root {
-  --red-glow:     #ff2040;
-  --glass-bg:     rgba(10, 5, 20, 0.35);
-  --glass-border: rgba(232, 0, 28, 0.40);
-}
-```
-
-To change the wallpaper, replace `wallpaper.jpg` with any image.
-
----
-
-*With great power comes great responsibility — and great task management.*
+</div>
